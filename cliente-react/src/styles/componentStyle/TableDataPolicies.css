@@ -1,0 +1,65 @@
+.policies-container {
+  margin: 90px auto 30px;
+  display: flex;
+  flex-direction: column;
+}
+.policies-container .form-rule {
+  width: 80%;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  gap: 20px;
+  background-color: #b3b3b3;
+  margin-bottom: 30px;
+}
+.policies-container .form-rule p {
+  color: white;
+  width: 30%;
+  text-align: center;
+}
+.policies-container .form-rule label {
+  width: 100%;
+}
+.policies-container .form-rule label input {
+  width: 100%;
+  height: 30px;
+}
+.policies-container .form-rule label textarea {
+  width: 100%;
+  height: 30px;
+}
+.policies-container .form-rule button {
+  width: 10%;
+  padding: 1%;
+  border-radius: 5px;
+  color: #fd7155;
+}
+.policies-container .table-policies {
+  width: 80%;
+  margin: 20px auto 60px;
+  border-collapse: collapse;
+  padding: 0px;
+}
+.policies-container .table-policies .encabezado {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.6745098039);
+  margin-top: 10px;
+  background-color: #fd7155;
+  border: 1px solid rgba(0, 0, 0, 0.6745098039);
+  padding: 5px;
+}
+.policies-container .table-policies .encabezado th {
+  border: 1px solid rgba(0, 0, 0, 0.6745098039);
+}
+.policies-container .table-policies td {
+  border: 1px solid rgba(0, 0, 0, 0.6745098039);
+  padding: 5px;
+  border-collapse: collapse;
+}
+.policies-container .table-policies .boton-eliminar {
+  background-color: red;
+  color: #f1f1f1;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}/*# sourceMappingURL=TableDataPolicies.css.map */

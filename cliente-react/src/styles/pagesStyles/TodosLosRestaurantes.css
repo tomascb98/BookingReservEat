@@ -1,0 +1,22 @@
+.categoria-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.categoria-container .eliminar-title-categoria {
+  background-color: #fd7155;
+  text-align: center;
+  padding: 2%;
+  color: #f1f1f1;
+}
+.categoria-container .ppal_container.table.table-striped.table-bordered.table-hover {
+  margin: 0;
+  width: 100%;
+}
+.categoria-container .ppal_container.table.table-striped.table-bordered.table-hover .encabezado {
+  padding: 1%;
+}
+.categoria-container .ppal_container.table.table-striped.table-bordered.table-hover .encabezado .items_tabla th {
+  padding: 1%;
+  color: #f1f1f1;
+  text-align: center;
+}/*# sourceMappingURL=TodosLosRestaurantes.css.map */

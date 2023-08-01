@@ -1,0 +1,118 @@
+@charset "UTF-8";
+.home-container-first {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+.home-container-first .home-container_buscador {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 40px;
+  background-image: url("../../assets/diseño.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 100%;
+  position: relative;
+}
+.home-container-first .home-container_buscador .socialMediaSharing-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.home-container-first .home-container_buscador .home-container_buscador_h2 {
+  margin: 1%;
+  text-shadow: 2px 2px 4px rgba(215, 215, 215, 0.5);
+  font-size: 50px;
+}
+.home-container-first .home-container_buscador .home-container_buscador_h3 {
+  margin: 1%;
+  font-size: 30px;
+  text-shadow: 2px 2px 4px rgba(119, 119, 119, 0.8);
+}
+.home-container-first .home-container_buscador .form-home {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  margin: 1% auto;
+  background-color: transparent;
+  gap: 30px;
+}
+.home-container-first .home-container_buscador .form-home .react-datepicker-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: auto;
+}
+.home-container-first .home-container_buscador .form-home .react-datepicker-wrapper .react-datepicker__input-container {
+  display: flex;
+  margin: auto;
+  width: 100%;
+}
+.home-container-first .home-container_buscador .form-home .react-datepicker-wrapper .react-datepicker__input-container input {
+  height: 32px;
+  padding: 18px 3rem;
+  border-radius: 10px;
+  font-size: 17px;
+  color: #000;
+  width: 100%;
+  text-align: center;
+}
+.home-container-first .home-container_buscador .form-home .home-container_buscador_input {
+  margin: 1% auto;
+  border-radius: 10px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid rgba(100, 100, 100, 0.3882352941);
+}
+.home-container-first .home-container_buscador .form-home .home-container_buscador_boton {
+  width: 150px;
+  height: 32px;
+  margin: 1% auto;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #fd7155;
+  border: 1px solid #fd7155;
+  color: white;
+  box-shadow: 1px 1px 8px #fd7155;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  border: solid 1px #fff;
+}
+.home-container-first .home-container_buscador .form-home .home-container_buscador_boton:hover {
+  background-color: white;
+  color: #fd7155;
+}
+
+@media (max-width: 900px) {
+  .home-container-first .home-container_buscador .home-container_buscador_h2 {
+    display: none;
+  }
+  .home-container-first .home-container_buscador .form-home {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-container-first .home-container_buscador .form-home .home-container_buscador_input {
+    width: 100%;
+    margin: 5% auto;
+  }
+  .home-container-first .home-container_buscador .form-home .home-container_buscador_boton {
+    width: 30%;
+    margin: 5% auto;
+  }
+}/*# sourceMappingURL=Home.css.map */

@@ -1,0 +1,33 @@
+.ppal_container{
+    width: 80%;
+    margin: 150px auto 60px;
+    border-collapse: collapse;
+    padding: 0px;
+    .encabezado{
+        padding: 10px;
+        border: 1px solid #000000ac;
+        margin-top: 10px;
+        background-color: #fd7155;
+        .items_tabla{
+            border: 1px solid #000000ac;
+            padding: 5px;
+                th{
+                    border: 1px solid #000000ac;
+
+                }
+    
+        }
+    }
+    .boton-eliminar{
+        background-color: red;
+        color: #f1f1f1;
+        width: 100%;
+        border-radius: 10px;
+    }
+    td{
+        border: 1px solid #000000ac;
+        padding: 5px;    
+        border-collapse: collapse;
+    }
+    
+}

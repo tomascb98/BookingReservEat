@@ -1,0 +1,36 @@
+.confirmation-container{
+    background-color: #ECF0F1;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    h1{
+        align-content: center;
+    }
+    .login-confirmation-button {
+      align-self: center;
+      justify-self: center;
+      height: 60px;
+      width: 150px;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      box-shadow: 1px 1px 3px #000000;
+      background: #fd7155;
+      text-decoration: none;
+      color: #f1f1f1;
+      }
+    a{
+      margin-top: 40px;
+      font-size: 20px;
+      line-height: 60px;
+    }
+    
+}
+

@@ -1,0 +1,81 @@
+.container-Newcategory {
+  margin-top: 90px;
+  background: linear-gradient(to top, #f1f1f1, #fd7155);
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+.container-Newcategory form {
+  display: flex;
+  align-items: center;
+  min-height: 50vh;
+  margin: auto;
+}
+.container-Newcategory form h2 {
+  margin: 5%;
+}
+.container-Newcategory form .labels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 5% auto;
+  width: 100%;
+}
+.container-Newcategory form .labels label {
+  justify-content: center;
+  margin-bottom: 2%;
+  width: 100%;
+}
+.container-Newcategory form .labels textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(136, 136, 136, 0.6431372549);
+}
+.container-Newcategory form .labels input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(136, 136, 136, 0.6431372549);
+}
+.container-Newcategory form .labels .inputImagen {
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  align-items: center;
+}
+.container-Newcategory form button {
+  width: 40%;
+  margin: 5% 30%;
+  background-color: #fd7155;
+  color: #f1f1f1;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px black;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .container-Newcategory form {
+    width: 40%;
+  }
+}
+@media (max-width: 800px) {
+  .container-Newcategory form {
+    width: 70%;
+  }
+}
+@media (max-width: 450px) {
+  .container-Newcategory form {
+    width: 90%;
+  }
+  .container-Newcategory form .labels label {
+    width: 80%;
+  }
+  .container-Newcategory form .labels textarea {
+    width: 90%;
+  }
+  .container-Newcategory form .labels input {
+    width: 90%;
+  }
+}/*# sourceMappingURL=NewCategory.css.map */

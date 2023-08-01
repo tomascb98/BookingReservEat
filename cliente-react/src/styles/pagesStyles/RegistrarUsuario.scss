@@ -1,0 +1,142 @@
+.register-container{
+    margin-top: 90px;
+    background: linear-gradient(to top, #f1f1f1, #fd7155);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .register-form{
+        background-color: #f1f1f1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        align-items: center;
+        width: 40%;
+        margin: 3% 30%;
+        height: 100%;
+        color: #000;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px rgba($color: #000000, $alpha: 0.8);
+        border: 0.1px solid rgba($color: #000000, $alpha: 0.1);
+        .form-title{
+            margin: 3% auto;
+        }
+        .parrafoRegister{
+            margin: 1% 0;
+            color: #000;
+            
+        }
+        .nombreApellido{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+           
+            .labelName{
+                width: 70%;
+                margin:  auto;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: flex-start;
+                label{
+                    margin: 1%;
+                }
+                input{
+                    border-radius: 10px;
+                    height: 30px;
+                    width: 100%;
+                    border: 1px solid #888888ac;
+
+                }
+            }
+            .labelApellido{
+                @extend .labelName;
+                    
+                    margin: 2% auto;
+                // margin: 3% auto;
+                // display: flex;
+                // justify-content: center;
+                // flex-direction: column;
+                // align-items: flex-start;
+                // .inputApellido{
+                //     border-radius: 10px;
+                //     height: 30px;
+                //     width: 100%;
+                //     border: 1px solid #888888ac;
+
+                // }
+                // label{
+                //     margin: 1%;
+                // }
+            }
+            
+
+        }
+        .label{
+            
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0 0 3% 0;
+            width: 70%;
+            label{
+                    margin: 1%;
+                    width: 100%;
+                    text-align: left;
+                }
+            
+
+            input{
+                    border: 1px solid #888888ac;
+                    border-radius: 10px;
+                    margin: auto ;
+                    width: 100%;
+                    height: 30px;
+                    
+            }
+        }
+        .condicion{
+            display: flex;
+            margin: 2%;
+            justify-content: center;
+            text-align: center;
+            width: 60%;
+        }
+        .form-button{
+            display: flex;
+            width: 20%;
+            justify-content: center;
+            padding: 10px;
+            background: #fd7155;
+            border-radius: 15px;
+            margin: 3%;
+            color: #f1f1f1;
+            box-shadow: 1px 1px 6px #000000;
+            cursor: pointer;
+        }
+        
+        
+}
+}
+
+@media (max-width: 950px){
+    .register-container{
+        .register-form{
+        width: 70%;
+        margin: 5% auto;
+        
+    }
+    }
+} 
+@media (max-width: 480px){
+    .register-container{
+        .register-form{
+        width: 90%;
+        margin: 5%;
+        
+    }
+    }
+} 

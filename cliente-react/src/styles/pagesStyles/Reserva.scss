@@ -1,0 +1,299 @@
+.product__details {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  
+  padding: 0 2rem;
+  margin: 0 auto;
+  box-shadow: none;
+
+.product__details_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #fd7155;
+
+  .icon-left {
+    font-size: 50px;
+    color: #fff;
+
+  }
+
+  .product__details_title {
+    color: #fff;
+    font-size: 30px;
+
+  }
+}
+}
+.reserva-container{
+    margin-top: 10px;
+  } 
+  body {
+    margin-top: 90px;
+    // margin-left: 1rem;
+    background-color: #ffffff;
+  
+    .reserva-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-gap: 15px;
+      background-color: #ffffff;
+      position: relative;
+  
+      .datos-reserva-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+  
+        .datos-usuario {
+          width: 100%;
+          padding: 20px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          color: #333;
+  
+          &:focus {
+            outline: none;
+            box-shadow: 0 0 5px #a1eafa;
+          }
+          .wide-form {
+            max-width: 600px; // Ajusta el valor según tus necesidades
+            margin: 0 auto; // Centra el formulario horizontalmente
+          }
+  
+          h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+  
+          form {
+            background-color: #fcfbfb;
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            grid-gap: 5px;
+            width: 90%;
+            box-shadow: none;
+  
+            label {
+              font-weight: bold;
+              margin-bottom: 10px;
+            }
+  
+            input {
+              width: 100%; // Asegura que los inputs ocupen todo el ancho del contenedor
+              padding: 8px;
+              margin-bottom: 15px;
+              border-radius: 4px;
+              border: 1px solid #ccc;
+              margin-bottom: 1rem;    
+              
+
+            }
+            .correo-input{
+              background-color: rgba(191, 184, 184, 0.553);
+              color: #555;
+            }
+          }
+        }
+  
+        .date-picker-reserva-container,
+        .hora-reserva-container {
+          padding: 20px;
+          background-color: #fcfbfb;
+          border: 1px solid #c3c3c3;
+          border-radius: 4px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+      }
+  
+      .detalle-restaurante-container {
+        flex: 2;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background-color: #fffffe;
+        // border: 1px solid #ccc;
+        border-radius: 4px;
+        // box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        grid-column: 2;
+
+
+        .cancelar-btn {
+          background-color: #ff0000; // Color rojo para el botón cancelar
+          color: #fff;
+          font-weight: 500;
+          cursor: pointer;
+          float: right; // Alinear a la derecha
+          margin-top: 1rem; // Margen superior para separarlo del botón anterior
+          margin-left: 1rem; // Espacio a la izquierda
+
+        }
+
+        h3 {
+          // Estilos para el título "Detalle de la reserva"
+          color: #333;
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+        
+  
+        .wide-card {
+          max-width: 2000px; // Ajusta el valor según tus necesidades
+          background-color: #f7f7f7;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+        
+        }
+
+
+  
+        h3 {
+          color: #555;
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          // Estilos para los párrafos del restaurante
+          color: #888;
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+  
+        img {
+          width: 100%;
+          height: 300px;
+          margin-bottom: 10px;
+          border-radius: 8px;
+        
+        }
+  
+        label {
+          font-weight: bold;
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+  
+        input {
+          width: 100%; // Asegura que los inputs ocupen todo el ancho del contenedor
+          padding: 8px;
+          margin-bottom: 15px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+        }
+        .confirmar-btn {
+          width: auto; // Ocupar todo el ancho del contenedor
+          margin-right: 1rem; // Margen derecho para separarlo del botón "Cancelar"
+          margin-top: 1rem; // Separación entre botones
+          margin: 1rem auto; // Margen superior e inferior de 1rem, y margen izquierdo y derecho automáticos para centrar
+          padding: 0.75rem 2rem;
+          border-radius: 6px;
+          background-color: #6658d3;
+          border: none;
+          color: #fff;
+          font-weight: 500;
+          cursor: pointer;
+          display: flex;
+
+        }
+
+        
+
+      }
+    }
+
+  }
+  
+  @media (max-width: 767px) {
+    .product__details_top{
+      width: 100%;
+      padding: 0;
+    }
+    .product__details{
+      width: 100%;
+      padding: 0;
+    }
+
+
+    body{
+      width: 100%;
+
+    
+
+    .reserva-container {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .datos-usuario{
+      form{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        
+
+        label {
+          grid-column: 1 / -1; /* Ocupar toda la columna */
+        }
+
+        input {
+          grid-column: 1 / -1; /* Ocupar toda la columna */
+        }
+
+      }
+
+
+    }
+
+    .date-picker-reserva-container{
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden; /* Agrega un overflow oculto para evitar que el calendario se desborde */
+      height:100%; 
+
+    }
+
+    .MuiPickersStaticDatePicker-root { /* Ajusta el tamaño del calendario */
+      width: 100%;
+      height: 100%; 
+
+    }
+    .MuiDateCalendar-root { /* Ajusta el tamaño del calendario */
+      width: 100%;
+      height: 100%; 
+      padding: 0; /* Quita el padding en dispositivos móviles */
+
+      
+
+    }
+
+    .hora-reserva-container{
+      max-width: 100%;
+
+    }
+
+  
+    .datos-reserva-container {
+      width: 100%;
+      padding: 10px;
+
+    }
+  
+    .detalle-restaurante-container {
+      width: 100%;
+      padding: 10px;
+
+    }
+  
+    .cancelar-btn {
+      margin: 0 auto;
+    }
+  }
+      
+    };

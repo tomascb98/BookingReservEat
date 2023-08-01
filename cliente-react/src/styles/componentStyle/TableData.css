@@ -1,0 +1,30 @@
+.ppal_container {
+  width: 80%;
+  margin: 150px auto 60px;
+  border-collapse: collapse;
+  padding: 0px;
+}
+.ppal_container .encabezado {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.6745098039);
+  margin-top: 10px;
+  background-color: #fd7155;
+}
+.ppal_container .encabezado .items_tabla {
+  border: 1px solid rgba(0, 0, 0, 0.6745098039);
+  padding: 5px;
+}
+.ppal_container .encabezado .items_tabla th {
+  border: 1px solid rgba(0, 0, 0, 0.6745098039);
+}
+.ppal_container .boton-eliminar {
+  background-color: red;
+  color: #f1f1f1;
+  width: 100%;
+  border-radius: 10px;
+}
+.ppal_container td {
+  border: 1px solid rgba(0, 0, 0, 0.6745098039);
+  padding: 5px;
+  border-collapse: collapse;
+}/*# sourceMappingURL=TableData.css.map */

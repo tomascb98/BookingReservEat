@@ -1,0 +1,19 @@
+.modalReserva-container h2 {
+  margin-bottom: 10px;
+}
+.modalReserva-container p {
+  margin: 10px;
+}
+.modalReserva-container p span {
+  color: black;
+}
+.modalReserva-container button {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  background-color: #6658d3;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 33%;
+}/*# sourceMappingURL=ModalReserva.css.map */

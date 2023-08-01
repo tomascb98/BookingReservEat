@@ -1,0 +1,41 @@
+.container-title {
+  margin-top: 40px;
+}
+
+.allProducts {
+  display: flex;
+  width: 20%;
+  margin: 10px 40% 3%;
+  padding: 0.5%;
+  background-color: #fd7155;
+  border-radius: 15px;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+.allProducts:hover {
+  background-color: white;
+  color: #fd7155;
+  box-shadow: 1px 1px 4px #fd7155;
+}
+
+.favoriteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.favoriteButton .heartIcon {
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+@media (max-width: 480px) {
+  .allProducts {
+    width: 50%;
+    margin: 7% 25%;
+    padding: 2%;
+  }
+}/*# sourceMappingURL=RecommendStyle.css.map */

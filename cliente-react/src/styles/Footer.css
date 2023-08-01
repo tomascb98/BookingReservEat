@@ -1,0 +1,36 @@
+.footer{
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+    bottom: 0;
+    position: relative;
+    
+    
+    
+}
+
+.footer_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+    /* margin-left: 60px; */
+}
+
+.texto{
+    text-align: center;
+    font-size: 12px;
+    /* margin-left: 35px; */
+}
+
+p{
+    color: #FF441F;
+}

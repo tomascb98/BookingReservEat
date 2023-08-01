@@ -1,0 +1,52 @@
+.restaurantCard{
+    display: flex;
+    width: 90%;
+    height: 250px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 5%;
+    cursor: pointer;
+    box-shadow: rgba(60, 64, 67, 0.557) 0px 1px 2px 0px, rgba(60, 64, 67, 0.323) 0px 2px 6px 2px;
+
+    img{
+        width: 50%;
+        height: auto;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .restaurantCard--info{
+        align-self: flex-start;
+        margin: 0;
+    }
+
+    div{
+        padding: 1rem 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 30px;
+
+        p{
+            color: rgba(120, 120, 120, 0.777);
+            font-size: 10px;
+            // margin-bottom: -30px;
+        }
+
+        .nameCard{
+            font-size: 18px;
+            margin-bottom: -40px;
+        }
+
+        .cityCard{
+            font-size: 13px;
+            text-align: left;
+        }
+
+        .categoryCard{
+            font-size: 13px;
+
+        }
+    }
+}

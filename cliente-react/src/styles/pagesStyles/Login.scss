@@ -1,0 +1,108 @@
+.login {
+  background: linear-gradient(to left, #f1f1f1, #FF441Fac);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 90px;
+  align-items: center;
+  min-height: 80vh;
+  gap: 2rem;
+  color: #f1f1f1;
+
+  div h2 {
+      
+      
+    }
+    
+    form {
+      border-radius: 10px;
+      width: 350px;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content:space-around;
+      box-shadow: 1px 1px 12px black;
+      background: #f1f1f1;
+      color: #000;
+      
+      h2{
+        display: flex;
+      justify-content: space-around;
+      
+      }
+      .rules-reserve{
+        text-align: center;
+        margin: 5%;
+
+        .rule-link{
+          text-decoration: none;
+          color: #fd7155;
+        }
+      }
+    }
+    
+    form button {
+      align-self: center;
+      justify-self: center;
+      height: 40px;
+      width: 120px;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      box-shadow: 1px 1px 3px #000000;
+      background: #fd7155;
+      text-decoration: none;
+      color: #f1f1f1;
+      font-size: 14px;
+      padding: 5px;
+      margin: 3%;
+    }
+
+    p{
+      color: #000;
+      margin-bottom: 15px;
+    }
+    
+    form input {
+      
+      border-radius: 15px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      -ms-border-radius: 15px;
+      -o-border-radius: 15px;
+      text-align: left;
+      padding-left: 1rem;
+      width: 100%;
+      border-radius: 10px;
+      height: 30px;
+      border: 1px solid #888888ac;
+    }
+    label{
+      width: 80%;
+      margin: 0 auto;
+      
+    }
+
+    .remember{
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+
+      input{
+          width: 15px;
+          box-shadow: none
+      };
+    }
+}
+
+@media (max-width:480px) {
+  .login{
+    form{
+      width: 90%;
+      margin: 5%;
+    }
+  }
+}

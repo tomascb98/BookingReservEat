@@ -1,0 +1,25 @@
+.categoria-container{
+    width: 80%;
+    margin: 0 auto;
+    .eliminar-title-categoria{
+        background-color: #fd7155;
+        text-align: center;
+        padding: 2%;
+        color: #f1f1f1;
+    }
+    .ppal_container.table.table-striped.table-bordered.table-hover{
+        margin: 0 ;
+        width: 100%;
+        .encabezado{
+            padding: 1%;
+          .items_tabla{
+            th{
+              padding: 1%;
+              color: #f1f1f1;
+              
+              text-align: center;
+            }
+          }
+        }
+      }
+}

@@ -1,0 +1,35 @@
+.container-reserve {
+  margin-top: 90px;
+  margin-bottom: 40px;
+}
+.container-reserve h2 {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  padding: 2%;
+  background-color: #fd7155;
+  color: #f1f1f1;
+}
+.container-reserve .ppal_container.table.table-striped.table-bordered.table-hover {
+  padding: 5%;
+  margin: 0 auto;
+}
+.container-reserve .ppal_container.table.table-striped.table-bordered.table-hover .encabezado {
+  padding: 5%;
+  border: 1px solid white;
+}
+.container-reserve .ppal_container.table.table-striped.table-bordered.table-hover .encabezado .items_tabla {
+  color: #f1f1f1;
+  padding: 5%;
+}
+.container-reserve .ppal_container.table.table-striped.table-bordered.table-hover .encabezado .items_tabla th {
+  padding: 2%;
+}
+.container-reserve tbody tr .past {
+  background-color: #e0e0e0;
+}
+.container-reserve tbody tr .future {
+  background-color: #ACFDA8;
+}/*# sourceMappingURL=ReserveUser.css.map */

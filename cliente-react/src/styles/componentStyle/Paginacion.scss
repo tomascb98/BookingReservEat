@@ -1,0 +1,35 @@
+.pag-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    margin: 5% auto;
+    .pag-boton{
+        background-color: #fd7155;
+        width: 25%;
+        border-radius: 15px;
+        padding: 2%;
+        cursor: pointer;
+        color: white;
+        box-shadow: 1px 1px 5px #fd7155;
+    }
+    .pag-numbers{
+        display: flex;
+        align-items: center;
+    }
+}
+@media (max-width:1000px) {
+    .pag-container{
+        width: 80%;
+        .pag-boton{
+            width: 40%;
+            margin: auto;
+            padding: 10px;
+        }
+        .pag-numbers{
+            
+           width: 100%;
+           justify-content: center;
+           margin: auto;
+        }
+    }
+}

@@ -1,0 +1,712 @@
+{
+	"info": {
+		"_postman_id": "5b2a5d53-5440-46d5-9d96-2495689812f8",
+		"name": "CollectionBooking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24592870"
+	},
+	"item": [
+		{
+			"name": "AuthenticationUser",
+			"item": [
+				{
+					"name": "allUsers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Obtener todos los usuarios exitoso\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    pm.response.to.be.json;",
+									"    var responseBody = pm.response.json();",
+									"    pm.expect(responseBody).to.be.an(\"array\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userResgister",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Registro de usuario exitoso\", function () {",
+									"    pm.sendRequest({",
+									"        url: \"http://localhost:8080/users/register\",",
+									"        method: \"POST\",",
+									"        header: {",
+									"            \"Content-Type\": \"application/json\"",
+									"        },",
+									"        body: {",
+									"            mode: \"raw\",",
+									"            raw: JSON.stringify({",
+									"                \"firstname\": \"sakura\",",
+									"                \"lastname\": \"sakuraa\",",
+									"                \"email\": \"sakura@gmail.com\",",
+									"                \"password\": \"1234523\"",
+									"            })",
+									"        ",
+									"        }",
+									"}, ",
+									"function () {",
+									"        pm.response.to.have.status(200);",
+									"        pm.response.to.be.json;",
+									"        var responseBody = pm.response.json();",
+									"        pm.expect(responseBody.id).to.equal(null);",
+									"        pm.expect(responseBody.jwt).to.exist;",
+									"        pm.expect(responseBody.userName).to.equal(null);",
+									"        pm.expect(responseBody.userLastname).to.equal(null);",
+									"        pm.expect(responseBody.email).to.equal(null);",
+									"        pm.expect(responseBody.role).to.equal(null);",
+									"    });",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\": \"sakura\",\n    \"lastname\": \"sakuraa\",\n    \"email\": \"sakura@gmail.com\",\n    \"password\": \"1234523\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userAuthenticate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Autenticación de usuario exitosa\", function () {",
+									"    pm.sendRequest({",
+									"        url: \"http://localhost:8080/users/authenticate\",",
+									"        method: \"POST\",",
+									"        header: {",
+									"            \"Content-Type\": \"application/json\"",
+									"        },",
+									"        body: {",
+									"            mode: \"raw\",",
+									"            raw: JSON.stringify({",
+									"                \"email\": \"johndoe@example.com\",",
+									"                \"password\": \"password123\"",
+									"            })",
+									"        }",
+									"    }, function (err, response) {",
+									"        pm.response.to.have.status(200);",
+									"        pm.response.to.have.jsonBody(\"id\");",
+									"        pm.response.to.have.jsonBody(\"jwt\");",
+									"        pm.response.to.have.jsonBody(\"userName\");",
+									"        pm.response.to.have.jsonBody(\"userLastname\");",
+									"        pm.response.to.have.jsonBody(\"email\");",
+									"        pm.response.to.have.jsonBody(\"role\");",
+									"    });",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"johndoe@example.com\",\n    \"password\": \"password123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users/authenticate",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirmEmail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Cambio de rol de usuario exitoso\", function () {",
+									"    pm.sendRequest({",
+									"        url: \"http://localhost:8080/users/users/email/2\",",
+									"        method: \"POST\",",
+									"        header: {",
+									"            \"Content-Type\": \"application/json\",",
+									"            \"Authorization\": \"Bearer <token>\"",
+									"        }",
+									"    }, function (err, response) {",
+									"        pm.response.to.have.status(201);",
+									"        pm.response.to.have.jsonBody(\"message\", \"User updated successfully\");",
+									"    });",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/users/email/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"users",
+								"email",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changeUserRole",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Cambio de rol de usuario exitoso\", function () {",
+									"    pm.sendRequest({",
+									"        url: \"http://localhost:8080/users/users/5/change-role\",",
+									"        method: \"POST\",",
+									"        header: {",
+									"            \"Content-Type\": \"application/json\",",
+									"            \"Authorization\": \"Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrYXJlbmFyYXF1ZWluZ2NpdmlsQGdtYWlsLmNvbSIsImlhdCI6MTY4NTcyOTIzNSwiZXhwIjoxNjg1NzMwNjc1fQ.n1OfaujkG2JtpYiaFrzetVctiVEWtC0dZD9r4a6PxiI\"",
+									"        }",
+									"    }, function (err, response) {",
+									"        pm.response.to.have.status(201);",
+									"        pm.response.to.have.jsonBody(\"response_message_key\", \"user_updated_message\");",
+									"    });",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users/users/5/change-role",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"users",
+								"5",
+								"change-role"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Restaurante",
+			"item": [
+				{
+					"name": "getRestaurant",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Script para la API de obtener un restaurante por nombre",
+									"pm.test(\"Obtener restaurante por nombre exitoso\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    pm.response.to.be.json;",
+									"    var responseBody = pm.response.json();",
+									"    pm.expect(responseBody).to.be.an(\"object\");   ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/Restaurants/El Mexican",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Restaurants",
+								"El Mexican"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restaurantResgister",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Registro de restaurante exitoso\", function () {",
+									"    pm.sendRequest({",
+									"        url: \"http://localhost:8080/Restaurants\",",
+									"        method: \"POST\",",
+									"        header: {",
+									"            \"Content-Type\": \"multipart/form-data\"",
+									"        },",
+									"        body: {",
+									"            mode: \"formdata\",",
+									"            formdata: [",
+									"                { key: \"fileImages\", value: '<path_to_image_file>', type: \"file\" },",
+									"                { key: \"name\", value: \"Restaurante Ejemplo\", type: \"text\" },",
+									"                { key: \"description\", value: \"Descripción del restaurante\", type: \"text\" },",
+									"                { key: \"address\", value: \"Dirección del restaurante\", type: \"text\" },",
+									"                { key: \"cityId\", value: \"1\", type: \"text\" },",
+									"                { key: \"categoryId\", value: \"1\", type: \"text\" }",
+									"            ]",
+									"        }",
+									"    }, function (err, response) {",
+									"        pm.response.to.have.status(201);",
+									"        pm.response.to.be.json;",
+									"        var responseBody = pm.response.json();",
+									"        pm.expect(responseBody).to.have.property(\"message\", \"Restaurant created successfully\");",
+									"    });",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fileImages",
+									"type": "file",
+									"src": [
+										"/Users/karenaraque/Downloads/restaurante3/combo-maria-para-compartir.jpg",
+										"/Users/karenaraque/Downloads/restaurante3/ensalada-de-camaron.jpg",
+										"/Users/karenaraque/Downloads/restaurante3/hamburguesa-frontera.jpg",
+										"/Users/karenaraque/Downloads/restaurante3/tacos-para-todos.jpg",
+										"/Users/karenaraque/Downloads/restaurante3/taquilla.jpg"
+									]
+								},
+								{
+									"key": "name",
+									"value": "tacosuno",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "lorem",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "call 13",
+									"type": "text"
+								},
+								{
+									"key": "cityId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "categoryId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/Restaurants",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Restaurants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restaurantSearchCity",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Búsqueda de restaurante por ciudad\", function () {",
+									"    pm.sendRequest({",
+									"        url: \"http://localhost:8080/Restaurants/city/1\",",
+									"        method: \"GET\"",
+									"    }, function (err, response) {",
+									"        pm.response.to.have.status(200);",
+									"        pm.response.to.be.json;",
+									"        var responseBody = pm.response.json();",
+									"        pm.expect(responseBody).to.be.an(\"array\");",
+									"        pm.expect(responseBody.length).to.be.above(0);",
+									"    });",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/Restaurants/city/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Restaurants",
+								"city",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restaurantSearchCategory",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Búsqueda de restaurante por categoría y actualización\", function () {",
+									"    pm.sendRequest({",
+									"        url: \"http://localhost:8080/Restaurants/category/1\",",
+									"        method: \"GET\"",
+									"    }, function (err, response) {",
+									"        pm.response.to.have.status(200);",
+									"        pm.response.to.be.json;",
+									"        var responseBody = pm.response.json();",
+									"        pm.expect(responseBody).to.be.an(\"array\");",
+									"        pm.expect(responseBody.length).to.be.above(0);",
+									"    })",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/Restaurants/category/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Restaurants",
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changeUserRole",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Script para la API de obtener un restaurante por nombre",
+									"pm.test(\"Obtener restaurante por nombre exitoso\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    pm.response.to.be.json;",
+									"    var responseBody = pm.response.json();",
+									"    pm.expect(responseBody).to.be.an(\"object\");   ",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/Restaurants/Mexicate",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Restaurants",
+								"Mexicate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "getCategory",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Script para la API de obtener una categoría por nombre",
+									"pm.test(\"Obtener categoría por nombre exitoso\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    pm.response.to.be.json;",
+									"    var responseBody = pm.response.json();",
+									"    pm.expect(responseBody).to.be.an(\"object\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/Categories/Comida Mexicana",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Categories",
+								"Comida Mexicana"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCategory",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Script para la API de eliminar una categoría por nombre",
+									"pm.test(\"Eliminar categoría por nombre exitoso\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    pm.response.to.be.json;",
+									"    var responseBody = pm.response.json();",
+									"    pm.expect(responseBody).to.have.property(\"message\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/Categories/Comida de Mar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Categories",
+								"Comida de Mar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "City",
+			"item": [
+				{
+					"name": "getCategory",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Script para la API de obtener una ciudad por nombre",
+									"pm.test(\"Obtener ciudad por nombre exitoso\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    pm.response.to.be.json;",
+									"    var responseBody = pm.response.json();",
+									"    pm.expect(responseBody).to.be.an(\"object\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/Cities/Bogota",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Cities",
+								"Bogota"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCategory",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Script para la API de eliminar una ciudad por nombre",
+									"pm.test(\"Eliminar ciudad por nombre exitoso\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    pm.response.to.be.json;",
+									"    var responseBody = pm.response.json();",
+									"    pm.expect(responseBody).to.have.property(\"message\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/Cities/Armenia",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"Cities",
+								"Armenia"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

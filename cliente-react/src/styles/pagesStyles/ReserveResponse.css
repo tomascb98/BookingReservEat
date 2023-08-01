@@ -1,0 +1,45 @@
+.reserve__response__container {
+  height: calc(100vh - 90px);
+  padding-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reserve__response__container .card {
+  width: 550px;
+  height: 250px;
+  font-weight: 600;
+  box-shadow: rgba(50, 50, 93, 0.1) 0 7px 10px -4px, rgb(23, 23, 23) 0 3px 8px 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.reserve__response__container .card svg {
+  width: 100px;
+}
+.reserve__response__container .card .card--text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.reserve__response__container .card .card--text h4 {
+  font-size: 24px;
+  color: #ff441f;
+}
+.reserve__response__container .card .card--text p {
+  color: #000;
+  font: 20px;
+}
+.reserve__response__container .card button {
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #ff441f;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}/*# sourceMappingURL=ReserveResponse.css.map */

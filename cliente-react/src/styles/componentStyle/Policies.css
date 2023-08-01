@@ -1,0 +1,48 @@
+div.politicas{
+    flex-wrap: nowrap;
+    padding: 2rem;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+div.politicas section{
+  display: flex;
+  justify-content: space-around;
+  background-color: #f1f1f1;
+}
+
+div.politicas section article{
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+div.politicas section article h3 {
+  margin: 20px 0 20px 0;
+  text-align: left;
+}
+
+div.politicas section article p {
+  color: black;
+  margin: 0 0 10px 0;
+  text-align: left;
+}
+
+@media screen and (max-width: 900px) {
+      div.politicas section{
+        display: flex;
+        flex-wrap: wrap;
+      }
+}
+
+@media screen and (max-width: 500px) {
+    div.politicas section{
+        display: initial;
+      }
+}

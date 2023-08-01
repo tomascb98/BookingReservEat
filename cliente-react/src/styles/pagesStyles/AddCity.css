@@ -1,0 +1,88 @@
+.container-register-city {
+  margin-top: 90px;
+  min-height: 80vh;
+  background: linear-gradient(to top, #f1f1f1, #fd7155);
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-register-city .container-add-register {
+  width: 100%;
+}
+.container-register-city .container-add-register .register__city {
+  flex-direction: column;
+  align-items: center;
+  margin: 3% auto;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 20px;
+  color: #000;
+  width: 40%;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.container-register-city .container-add-register .register__city label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5px;
+  gap: 5px;
+}
+.container-register-city .container-add-register .register__city label input {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  color: #666;
+}
+.container-register-city .container-add-register .register__city label input:focus {
+  outline: none;
+  border-color: #4080ff;
+}
+.container-register-city .container-add-register .register__city h2 {
+  margin-bottom: 2rem;
+}
+.container-register-city .container-add-register .register__city .agregar, .container-register-city .container-add-register .register__city button {
+  background-color: #fd7155;
+  color: #f1f1f1;
+  padding: 8px 25px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 4px black;
+  cursor: pointer;
+  margin-top: 3%;
+}
+
+@media (max-width: 900px) {
+  .container-register {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-register .container-add-register .register__city {
+    width: 70%;
+  }
+  .container-register .container-add-register .register__restaurant {
+    width: 90%;
+    margin-top: 6%;
+  }
+}
+@media (max-width: 480px) {
+  .container-register {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-register .container-add-register .register__city {
+    width: 80%;
+  }
+  .container-register .container-add-register .register__restaurant {
+    width: 90%;
+    margin-top: 12%;
+  }
+}/*# sourceMappingURL=AddCity.css.map */
